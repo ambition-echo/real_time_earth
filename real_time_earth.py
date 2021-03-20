@@ -8,12 +8,13 @@ import datetime
 import re
 import os
 # 屏幕分辨率
-X = int(win32api.GetSystemMetrics(win32con.SM_CXSCREEN)*1.5)
-Y = int(win32api.GetSystemMetrics(win32con.SM_CYSCREEN)*1.5)
+X = int(win32api.GetSystemMetrics(win32con.SM_CXSCREEN) * 1.5)
+Y = int(win32api.GetSystemMetrics(win32con.SM_CYSCREEN) * 1.5)
+# 存储路径
 path = 'D://'
 name = 'wallpaper.png'
-today = ''
-path_today = ''
+
+# 图片下载
 
 
 def download(url, path):
@@ -25,9 +26,10 @@ def download(url, path):
 
 def fill_img(path):
     global X, Y  # 屏幕分辨率
+
     img = Image.open(path)
     new_img = Image.new(img.mode, (X, Y), color='black')
-    new_img.paste(img, (int(X/2 - 250), int(Y/2 - 250)))
+    new_img.paste(img, (int(X / 2 - 250), int(Y / 2 - 250)))
     new_img.save(path)
     # print("合成成功")
 
@@ -69,13 +71,15 @@ def draw_time():
 
     img = Image.open(path+name)
     draw = ImageDraw.Draw(img)
-    draw.arc((X-390, 120, X-110, 400), 0, 360, fill=(255, 255, 255))
-    draw.arc((X-389, 121, X-111, 399), 0, 360, fill=(255, 255, 255))
-    draw.arc((X-388, 122, X-112, 398), 0, 360, fill=(255, 255, 255))
-    draw.arc((X-387, 123, X-113, 397), 0, 360, fill=(255, 255, 255))
-    draw.arc((X-386, 124, X-114, 396), 0, 360, fill=(255, 255, 255))
+    # 画圆
+    draw.arc((X - 390, 120, X - 110, 400), 0, 360, fill=(255, 255, 255))
+    draw.arc((X - 389, 121, X - 111, 399), 0, 360, fill=(255, 255, 255))
+    draw.arc((X - 388, 122, X - 112, 398), 0, 360, fill=(255, 255, 255))
+    draw.arc((X - 387, 123, X - 113, 397), 0, 360, fill=(255, 255, 255))
+    draw.arc((X - 386, 124, X - 114, 396), 0, 360, fill=(255, 255, 255))
     a = int(get_time().strftime("%H")) + 8
     a = '%02d' % a
+    # 在图片上打印时间
     draw.text((X-360, 200), f'{a}\'{get_time().strftime("%M")}',
               fill=(255, 255, 255), font=ImageFont.truetype('arial.ttf', 90))
     draw.text((X-310, 300), f'{get_time().strftime("%b")}.{get_time().strftime("%d")}',
@@ -99,9 +103,9 @@ if __name__ == '__main__':
             main()
             draw_time()
             set_wallpaper(path + '_' + name)
-            sleep(58)
+            sleep(55)
         if get_time().strftime('%M') != temp:
             temp = get_time().strftime('%M')
             draw_time()
             set_wallpaper(path + '_' + name)
-            sleep(58)
+            sleep(55)
