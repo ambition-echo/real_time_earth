@@ -1,4 +1,5 @@
 from PIL import Image, ImageDraw, ImageFont
+from subprocess import run, PIPE
 from time import sleep
 import win32con
 import win32gui
@@ -86,7 +87,7 @@ def draw_time():
 
 
 if __name__ == '__main__':
-    if os.system('ping www.baidu.com') == 0:
+    if run('ping www.baidu.com', stdout=PIPE, stderr=PIPE, stdin=PIPE, shell=True).returncode == 0:
         main()
     if os.path.exists(path + name):
         draw_time()
@@ -96,7 +97,7 @@ if __name__ == '__main__':
     num = 0
     temp = '0'
     while (1):
-        if num >= 10 and os.system('ping www.baidu.com') == 0:
+        if num >= 10 and run('ping www.baidu.com', stdout=PIPE, stderr=PIPE, stdin=PIPE, shell=True).returncode == 0:
             num = 0
             main()
             draw_time()
