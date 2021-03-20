@@ -29,7 +29,7 @@
 ![预览效果](./preview.png "预览效果")
 
 ## Demo
-+ 风云四号版：[demo下载](https://github.com/hgy-xslh/real_time_earth/releases/tag/1.0)
-+ 向日葵八号版：[demo下载](https://github.com/hgy-xslh/real_time_earth/releases/tag/1.0)
++ 风云四号版：[demo下载](https://github.com/hgy-xslh/real_time_earth/releases/tag)
++ 向日葵八号版：[demo下载](https://github.com/hgy-xslh/real_time_earth/releases/tag)
 
 Email: <ambition_echo@outlook.com>
