@@ -14,9 +14,9 @@
 
 5. 改变运行逻辑，降低了性能消耗
 ## 其他说明
-+ `real_time_earth_CN.py`用风云四号卫星拍摄的照片，一小时更新一张，由于风云四号的照片上传延迟一天，故实际上采用的照片是前一天同一时刻的照片
++ `real_time_earth_CN.py`用中国风云四号卫星拍摄的照片，一小时更新一张，由于风云四号的照片上传延迟一天，故实际上采用的照片是前一天同一时刻的照片
 
-+ `real_time_earth_JP.py`用向日葵八号卫星拍摄的照片，十分钟更新一张，延迟半小时。
++ `real_time_earth_JP.py`用日本向日葵八号卫星拍摄的照片，十分钟更新一张，延迟半小时。
 
 风云四号实时网页：[风云四号](http://rsapp.nsmc.org.cn/geofy/?i=0&isPlay=true&speed=2&sat=fy-4a&pro=geos&type=full_disk&band=1&overlay=&x=-590567.8054997543&y=80011.25&z=0&area=1&ll=0&county=1&duration=36&interval=1&c=false&cp=0.5&st=&et=&ac=&hide=1&s=1)
 
@@ -28,7 +28,5 @@
 ## Demo
 + 风云四号版：[demo下载](https://github.com/hgy-xslh/real_time_earth/releases/tag/1.0)
 + 向日葵八号版：[demo下载](https://github.com/hgy-xslh/real_time_earth/releases/tag/1.0)
-
-如果你有任何问题，可以联系我
 
 Email: <ambition_echo@outlook.com>
